@@ -91,5 +91,21 @@
       33,
       396915
     ]
+  },
+  {
+    "duration": 1.736216,
+    "colour": "amber",
+    "predicted": "green",
+    "revert_if_wrong": "off",
+    "index": 6,
+    "time": [
+      2025,
+      3,
+      27,
+      12,
+      37,
+      13,
+      895968
+    ]
   }
 ]
