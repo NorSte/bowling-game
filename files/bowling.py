@@ -12,6 +12,9 @@ def bowling(string):
             final_score += compute_spare(clean_string, i)
         elif (clean_string[i]  == "-"):
             final_score += 0
+            clean_string = clean_string[:i] + clean_string[i+1:]
+            i -= 1
+            
             
             
     return final_score
