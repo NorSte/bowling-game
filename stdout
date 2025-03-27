@@ -2,15 +2,15 @@
 platform linux -- Python 3.13.2, pytest-8.3.4, pluggy-1.5.0 -- /usr/local/bin/python3.13
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=288916
+Using --random-order-seed=353420
 
 rootdir: /sandbox
 plugins: cov-6.0.0, mock-3.14.0, random-order-1.1.1
 collecting ... collected 4 items
 
-test_bowling.py::test_miss_and_spare FAILED                              [ 25%]
-test_bowling.py::test_all_strikes PASSED                                 [ 50%]
-test_bowling.py::test_strikes_and_numbers PASSED                         [ 75%]
+test_bowling.py::test_all_strikes PASSED                                 [ 25%]
+test_bowling.py::test_strikes_and_numbers PASSED                         [ 50%]
+test_bowling.py::test_miss_and_spare FAILED                              [ 75%]
 test_bowling.py::test_strikes_with_spares PASSED                         [100%]
 
 =================================== FAILURES ===================================
@@ -21,31 +21,23 @@ _____________________________ test_miss_and_spare ______________________________
 
 test_bowling.py:13: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-bowling.py:10: in bowling
-    final_score += compute_X(clean_string, i)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-clean_string = 'XX-/XXXXXXX4/', i = 1
+string = 'X|X|-/|X|X|X|X|X|X|X||4/'
 
-    def compute_X(clean_string, i):
-        score = 10
-        next_string = clean_string[i+1]
-        next_next_string = clean_string[i+2]
+    def bowling(string):
+        clean_string = string.replace('|', '')
+        final_score = 0
     
-        if (next_string == "X"):
-            score += 10
-        elif (next_string == "-"):
-            score += 0
-        else:
-            score += int(next_string)
-    
-        if (next_next_string== "X"):
-            score += 10
-        elif (next_next_string == "/"):
->           score += 10 - int(next_string)
-E           ValueError: invalid literal for int() with base 10: '-'
+        # Should read all numbers and compute the final result
+        for i in range(10):
+            if (clean_string[i] == "X"):
+                final_score += compute_X(clean_string, i)
+            elif (clean_string[i] == "/"):
+                final_score += compute_spare(clean_string, i)
+>           elif (next_next_string == "-"):
+E           NameError: name 'next_next_string' is not defined
 
-bowling.py:35: ValueError
+bowling.py:13: NameError
 =========================== short test summary info ============================
-FAILED test_bowling.py::test_miss_and_spare - ValueError: invalid literal for...
-========================= 1 failed, 3 passed in 0.10s ==========================
+FAILED test_bowling.py::test_miss_and_spare - NameError: name 'next_next_stri...
+========================= 1 failed, 3 passed in 0.11s ==========================

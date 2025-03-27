@@ -32,7 +32,10 @@ def compute_X(clean_string, i):
     if (next_next_string== "X"):
         score += 10
     elif (next_next_string == "/"):
-        score += 10 - int(next_string)
+        if(next_string == "-"):
+            score += 10 
+        else:    
+            score += 10 - int(next_string)
     elif (next_next_string == "-"):
         score += 0
     else:
