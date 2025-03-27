@@ -52,7 +52,7 @@ def compute_X(clean_string, i):
 
 def compute_spare(clean_string, i):
     score = 10
-    next_string = clean_string[i+1]
+    next_string = clean_string[i+2] 
     
     if (next_string == "X"):
         score += 10
