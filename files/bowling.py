@@ -10,7 +10,7 @@ def bowling(string):
             final_score += compute_X(clean_string, i)
         elif (clean_string[i] == "/"):
             final_score += compute_spare(clean_string, i)
-        elif (next_next_string == "-"):
+        elif (clean_string[i]  == "-"):
             final_score += 0
             
             
