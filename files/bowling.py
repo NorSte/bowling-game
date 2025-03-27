@@ -24,6 +24,8 @@ def compute_X(clean_string, i):
     
     if (next_string == "X"):
         score += 10
+    elif (next_next_string == "-"):
+        score += 0
     else:
         score += int(next_string)
         
