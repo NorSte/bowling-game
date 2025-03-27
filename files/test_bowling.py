@@ -15,6 +15,8 @@ def test_miss_and_spare():
 def test_final_combination():
     assert bowling("X|7/|9-|X|-8|8/|-6|X|X|X||81") == 167
 
+def test_readme2():
+    assert bowling("9-|9-|9-|9-|9-|9-|9-|9-|9-|9-||") == 90
     
-    
-    
+def test_readme3():
+    assert bowling("5/|5/|5/|5/|5/|5/|5/|5/|5/|5/||5") == 150
