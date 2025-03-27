@@ -2,15 +2,15 @@
 platform linux -- Python 3.13.2, pytest-8.3.4, pluggy-1.5.0 -- /usr/local/bin/python3.13
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=381490
+Using --random-order-seed=355636
 
 rootdir: /sandbox
 plugins: cov-6.0.0, mock-3.14.0, random-order-1.1.1
 collecting ... collected 3 items
 
 test_bowling.py::test_strikes_and_numbers PASSED                         [ 33%]
-test_bowling.py::test_all_strikes PASSED                                 [ 66%]
-test_bowling.py::test_strikes_with_spares FAILED                         [100%]
+test_bowling.py::test_strikes_with_spares FAILED                         [ 66%]
+test_bowling.py::test_all_strikes PASSED                                 [100%]
 
 =================================== FAILURES ===================================
 ___________________________ test_strikes_with_spares ___________________________
@@ -47,4 +47,4 @@ E           ValueError: invalid literal for int() with base 10: '/'
 bowling.py:31: ValueError
 =========================== short test summary info ============================
 FAILED test_bowling.py::test_strikes_with_spares - ValueError: invalid litera...
-========================= 1 failed, 2 passed in 0.11s ==========================
+========================= 1 failed, 2 passed in 0.09s ==========================
