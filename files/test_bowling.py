@@ -5,3 +5,6 @@ def test_all_strikes():
     
 def test_strikes_and_numbers():
     assert bowling("X|X|X|X|X|X|X|X|X|X||X6") == 296
+    
+def test_strikes_with_spares():
+    assert bowling("X|X|X|X|X|X|X|X|X|X||4/") == 290

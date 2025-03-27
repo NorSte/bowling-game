@@ -12,7 +12,7 @@ def bowling(string):
             
     return final_score
 
-        
+# Computes and returns the value of X with the respective "nexts"
 def compute_X(clean_string, i):
     score = 10
     next_string = clean_string[i+1]
@@ -20,10 +20,16 @@ def compute_X(clean_string, i):
     
     if (next_string == "X"):
         score += 10
+    else:
+        score += int(next_string)
+        
     if (next_next_string== "X"):
         score += 10
+    elif (next_string == "/"):
+        score += 10 - int(next_string)
     else:
         score += int(next_next_string)
     
     return score
+    
     
