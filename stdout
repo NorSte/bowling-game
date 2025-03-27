@@ -2,25 +2,14 @@
 platform linux -- Python 3.13.2, pytest-8.3.4, pluggy-1.5.0 -- /usr/local/bin/python3.13
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=513956
+Using --random-order-seed=739058
 
 rootdir: /sandbox
 plugins: cov-6.0.0, mock-3.14.0, random-order-1.1.1
 collecting ... collected 3 items
 
-test_bowling.py::test_strikes_with_spares FAILED                         [ 33%]
+test_bowling.py::test_strikes_with_spares PASSED                         [ 33%]
 test_bowling.py::test_all_strikes PASSED                                 [ 66%]
 test_bowling.py::test_strikes_and_numbers PASSED                         [100%]
 
-=================================== FAILURES ===================================
-___________________________ test_strikes_with_spares ___________________________
-
-    def test_strikes_with_spares():
->       assert bowling("X|X|X|X|X|X|X|X|X|X||4/") == 290
-E       AssertionError: assert 284 == 290
-E        +  where 284 = bowling('X|X|X|X|X|X|X|X|X|X||4/')
-
-test_bowling.py:10: AssertionError
-=========================== short test summary info ============================
-FAILED test_bowling.py::test_strikes_with_spares - AssertionError: assert 284...
-========================= 1 failed, 2 passed in 0.09s ==========================
+============================== 3 passed in 0.06s ===============================

@@ -112,7 +112,7 @@ E228: msg = fmt%(errno, errmsg)
 E231: ['a','b']
 E231: foo(bar,baz)
 E231: [{'a':'b'}]
-/sandbox/bowling.py:23:25: E225 missing whitespace around operator
+/sandbox/bowling.py:26:25: E225 missing whitespace around operator
     if (next_next_string== "X"):
                         ^
     Surround operators with the correct amount of whitespace.
@@ -154,7 +154,7 @@ E228: msg = fmt%(errno, errmsg)
 E231: ['a','b']
 E231: foo(bar,baz)
 E231: [{'a':'b'}]
-/sandbox/bowling.py:29:5: W292 no newline at end of file
+/sandbox/bowling.py:35:5: W292 no newline at end of file
 
     ^
     Trailing blank lines are superfluous.
