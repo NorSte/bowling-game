@@ -1,14 +1,44 @@
-# This a copy of [your cyber-dojo exercise](https://cyber-dojo.org/kata/edit/3L5hxt):
-- Exercise: `Bowling Game`
-- Language & test-framework: `Python 3.13, Pytest 8.3.4`
+# 🎳 Bowling Game (Cyber-Dojo Challenge)
 
-## How to upload your cyber-dojo exercise to GitHub:
-- Go to your github on browser.
-- Create a new repo for your cyber-dojo practice. For example `cyber-dojo-2021-7-11-bR2hnf`
-- Execute the instructions shown in GitHub to 'push an existing repository from the command line'
-The instructions will look like this:
-```
-git remote add origin https://github.com/diegopego/cyber-dojo-2021-7-11-bR2hnf.git
-git branch -M main
-git push -u origin main
-```
+This is a Python implementation of the classic **Bowling Score Calculator**, developed as part of the Cyber-Dojo kata.
+
+## Project Structure
+
+cyber-dojo-bowling-game/
+├── files/                 # Main source code files
+├── test_bowling.py        # Unit tests for the game
+├── bowling.py             # Core logic for score calculation
+├── README.md              # This file
+├── manifest.json, etc.    # Cyber-Dojo configuration files
+
+## Features
+
+- Calculates bowling scores frame-by-frame
+- Supports all rules:
+  - Strikes (`X`)
+  - Spares (`/`)
+  - Misses (`-`)
+  - Tenth frame bonus logic
+- Includes unit tests using `pytest`
+
+## How to Run
+
+Make sure you have Python and pytest installed:
+
+pip install pytest
+
+Then run tests with:
+
+pytest
+
+## Example
+
+For input:  
+X|7/|9-|X|-8|8/|-6|X|X|X||81
+
+The output score will be:
+167
+
+## Based On
+
+This project is inspired by the Cyber-Dojo Bowling Game Kata (https://cyber-dojo.org/).
