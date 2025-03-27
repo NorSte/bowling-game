@@ -2,12 +2,23 @@
 platform linux -- Python 3.13.2, pytest-8.3.4, pluggy-1.5.0 -- /usr/local/bin/python3.13
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=477464
+Using --random-order-seed=175574
 
 rootdir: /sandbox
 plugins: cov-6.0.0, mock-3.14.0, random-order-1.1.1
 collecting ... collected 1 item
 
-test_bowling.py::test_all_strikes PASSED                                 [100%]
+test_bowling.py::test_all_strikes FAILED                                 [100%]
 
-============================== 1 passed in 0.06s ===============================
+=================================== FAILURES ===================================
+_______________________________ test_all_strikes _______________________________
+
+    def test_all_strikes():
+>       assert bowling("X|X|X|X|X|X|X|X|X|X||XX") == 300
+E       AssertionError: assert None == 300
+E        +  where None = bowling('X|X|X|X|X|X|X|X|X|X||XX')
+
+test_bowling.py:4: AssertionError
+=========================== short test summary info ============================
+FAILED test_bowling.py::test_all_strikes - AssertionError: assert None == 300
+============================== 1 failed in 0.07s ===============================
