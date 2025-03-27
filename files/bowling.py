@@ -3,16 +3,24 @@
 def bowling(string):
     clean_string = string.replace('|', '')
     final_score = 0
-
+    frame = 0
+    i = 0  
+    
     # Should read all numbers and compute the final result
-    for i in range(len(clean_string) - 2):
-        if (clean_string[i] == "X"):
+    while frame < 10:
+        if clean_string[i] == 'X':  
             final_score += compute_X(clean_string, i)
-        elif (clean_string[i] == "/"):
+            i += 1  
+        elif clean_string[i+1] == '/':  
             final_score += compute_spare(clean_string, i)
-        elif (clean_string[i]  == "-"):
-            final_score += 0
-            
+            i += 2
+        else:  
+            throw1 = 0 if clean_string[i] == '-' else int(clean_string[i])
+            throw2 = 0 if clean_string[i+1] == '-' else int(clean_string[i+1])
+            final_score += throw1 + throw2
+            i += 2
+        frame += 1
+
     return final_score
 
 # Computes and returns the value of X with the respective "nexts"
