@@ -5,7 +5,7 @@ def bowling(string):
     final_score = 0
 
     # Should read all numbers and compute the final result
-    for i, __ in enumerate(clean_string[:2]):
+    for i in range(len(clean_string) - 2):
         if (clean_string[i] == "X"):
             final_score += compute_X(clean_string, i)
         elif (clean_string[i] == "/"):
