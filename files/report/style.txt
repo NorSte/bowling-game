@@ -1,34 +1,185 @@
-/sandbox/bowling.py:13:5: E303 too many blank lines (2)
-    return final_score
-    ^
-    Separate top-level function and class definitions with two blank
-lines.
+/sandbox/bowling.py:7:10: W291 trailing whitespace
+    i = 0
+         ^
+    Trailing whitespace is superfluous.
 
-Method definitions inside a class are separated by a single blank
-line.
+The warning returned varies on whether the line itself is blank,
+for easier filtering for those who want to indent their blank lines.
 
-Extra blank lines may be used (sparingly) to separate groups of
-related functions.  Blank lines may be omitted between a bunch of
-related one-liners (e.g. a set of dummy implementations).
+Okay: spam(1)\n#
+W291: spam(1) \n#
+W293: class Foo(object):\n    \n    bang = 12
+/sandbox/bowling.py:11:35: W291 trailing whitespace
+        if clean_string[i] == 'X':
+                                  ^
+    Trailing whitespace is superfluous.
 
-Use blank lines in functions, sparingly, to indicate logical
-sections.
+The warning returned varies on whether the line itself is blank,
+for easier filtering for those who want to indent their blank lines.
 
-Okay: def a():\n    pass\n\n\ndef b():\n    pass
-Okay: def a():\n    pass\n\n\nasync def b():\n    pass
-Okay: def a():\n    pass\n\n\n# Foo\n# Bar\n\ndef b():\n    pass
-Okay: default = 1\nfoo = 1
-Okay: classify = 1\nfoo = 1
+Okay: spam(1)\n#
+W291: spam(1) \n#
+W293: class Foo(object):\n    \n    bang = 12
+/sandbox/bowling.py:13:19: W291 trailing whitespace
+            i += 1
+                  ^
+    Trailing whitespace is superfluous.
 
-E301: class Foo:\n    b = 0\n    def bar():\n        pass
-E302: def a():\n    pass\n\ndef b(n):\n    pass
-E302: def a():\n    pass\n\nasync def b(n):\n    pass
-E303: def a():\n    pass\n\n\n\ndef b(n):\n    pass
-E303: def a():\n\n\n\n    pass
-E304: @decorator\n\ndef a():\n    pass
-E305: def a():\n    pass\na()
-E306: def a():\n    def b():\n        pass\n    def c():\n        pass
-/sandbox/bowling.py:18:33: E226 missing whitespace around arithmetic operator
+The warning returned varies on whether the line itself is blank,
+for easier filtering for those who want to indent their blank lines.
+
+Okay: spam(1)\n#
+W291: spam(1) \n#
+W293: class Foo(object):\n    \n    bang = 12
+/sandbox/bowling.py:14:28: E226 missing whitespace around arithmetic operator
+        elif clean_string[i+1] == '/':
+                           ^
+    Surround operators with the correct amount of whitespace.
+
+- Always surround these binary operators with a single space on
+  either side: assignment (=), augmented assignment (+=, -= etc.),
+  comparisons (==, <, >, !=, <=, >=, in, not in, is, is not),
+  Booleans (and, or, not).
+
+- Each comma, semicolon or colon should be followed by whitespace.
+
+- If operators with different priorities are used, consider adding
+  whitespace around the operators with the lowest priorities.
+
+Okay: i = i + 1
+Okay: submitted += 1
+Okay: x = x * 2 - 1
+Okay: hypot2 = x * x + y * y
+Okay: c = (a + b) * (a - b)
+Okay: foo(bar, key='word', *args, **kwargs)
+Okay: alpha[:-i]
+Okay: [a, b]
+Okay: (3,)
+Okay: a[3,] = 1
+Okay: a[1:4]
+Okay: a[:4]
+Okay: a[1:]
+Okay: a[1:4:2]
+
+E225: i=i+1
+E225: submitted +=1
+E225: x = x /2 - 1
+E225: z = x **y
+E225: z = 1and 1
+E226: c = (a+b) * (a-b)
+E226: hypot2 = x*x + y*y
+E227: c = a|b
+E228: msg = fmt%(errno, errmsg)
+E231: ['a','b']
+E231: foo(bar,baz)
+E231: [{'a':'b'}]
+/sandbox/bowling.py:14:39: W291 trailing whitespace
+        elif clean_string[i+1] == '/':
+                                      ^
+    Trailing whitespace is superfluous.
+
+The warning returned varies on whether the line itself is blank,
+for easier filtering for those who want to indent their blank lines.
+
+Okay: spam(1)\n#
+W291: spam(1) \n#
+W293: class Foo(object):\n    \n    bang = 12
+/sandbox/bowling.py:17:14: W291 trailing whitespace
+        else:
+             ^
+    Trailing whitespace is superfluous.
+
+The warning returned varies on whether the line itself is blank,
+for easier filtering for those who want to indent their blank lines.
+
+Okay: spam(1)\n#
+W291: spam(1) \n#
+W293: class Foo(object):\n    \n    bang = 12
+/sandbox/bowling.py:19:41: E226 missing whitespace around arithmetic operator
+            throw2 = 0 if clean_string[i+1] == '-' else int(clean_string[i+1])
+                                        ^
+    Surround operators with the correct amount of whitespace.
+
+- Always surround these binary operators with a single space on
+  either side: assignment (=), augmented assignment (+=, -= etc.),
+  comparisons (==, <, >, !=, <=, >=, in, not in, is, is not),
+  Booleans (and, or, not).
+
+- Each comma, semicolon or colon should be followed by whitespace.
+
+- If operators with different priorities are used, consider adding
+  whitespace around the operators with the lowest priorities.
+
+Okay: i = i + 1
+Okay: submitted += 1
+Okay: x = x * 2 - 1
+Okay: hypot2 = x * x + y * y
+Okay: c = (a + b) * (a - b)
+Okay: foo(bar, key='word', *args, **kwargs)
+Okay: alpha[:-i]
+Okay: [a, b]
+Okay: (3,)
+Okay: a[3,] = 1
+Okay: a[1:4]
+Okay: a[:4]
+Okay: a[1:]
+Okay: a[1:4:2]
+
+E225: i=i+1
+E225: submitted +=1
+E225: x = x /2 - 1
+E225: z = x **y
+E225: z = 1and 1
+E226: c = (a+b) * (a-b)
+E226: hypot2 = x*x + y*y
+E227: c = a|b
+E228: msg = fmt%(errno, errmsg)
+E231: ['a','b']
+E231: foo(bar,baz)
+E231: [{'a':'b'}]
+/sandbox/bowling.py:19:75: E226 missing whitespace around arithmetic operator
+            throw2 = 0 if clean_string[i+1] == '-' else int(clean_string[i+1])
+                                                                          ^
+    Surround operators with the correct amount of whitespace.
+
+- Always surround these binary operators with a single space on
+  either side: assignment (=), augmented assignment (+=, -= etc.),
+  comparisons (==, <, >, !=, <=, >=, in, not in, is, is not),
+  Booleans (and, or, not).
+
+- Each comma, semicolon or colon should be followed by whitespace.
+
+- If operators with different priorities are used, consider adding
+  whitespace around the operators with the lowest priorities.
+
+Okay: i = i + 1
+Okay: submitted += 1
+Okay: x = x * 2 - 1
+Okay: hypot2 = x * x + y * y
+Okay: c = (a + b) * (a - b)
+Okay: foo(bar, key='word', *args, **kwargs)
+Okay: alpha[:-i]
+Okay: [a, b]
+Okay: (3,)
+Okay: a[3,] = 1
+Okay: a[1:4]
+Okay: a[:4]
+Okay: a[1:]
+Okay: a[1:4:2]
+
+E225: i=i+1
+E225: submitted +=1
+E225: x = x /2 - 1
+E225: z = x **y
+E225: z = 1and 1
+E226: c = (a+b) * (a-b)
+E226: hypot2 = x*x + y*y
+E227: c = a|b
+E228: msg = fmt%(errno, errmsg)
+E231: ['a','b']
+E231: foo(bar,baz)
+E231: [{'a':'b'}]
+/sandbox/bowling.py:29:33: E226 missing whitespace around arithmetic operator
     next_string = clean_string[i+1]
                                 ^
     Surround operators with the correct amount of whitespace.
@@ -70,7 +221,7 @@ E228: msg = fmt%(errno, errmsg)
 E231: ['a','b']
 E231: foo(bar,baz)
 E231: [{'a':'b'}]
-/sandbox/bowling.py:19:38: E226 missing whitespace around arithmetic operator
+/sandbox/bowling.py:30:38: E226 missing whitespace around arithmetic operator
     next_next_string = clean_string[i+2]
                                      ^
     Surround operators with the correct amount of whitespace.
@@ -112,7 +263,7 @@ E228: msg = fmt%(errno, errmsg)
 E231: ['a','b']
 E231: foo(bar,baz)
 E231: [{'a':'b'}]
-/sandbox/bowling.py:26:25: E225 missing whitespace around operator
+/sandbox/bowling.py:39:25: E225 missing whitespace around operator
     if (next_next_string== "X"):
                         ^
     Surround operators with the correct amount of whitespace.
@@ -154,9 +305,102 @@ E228: msg = fmt%(errno, errmsg)
 E231: ['a','b']
 E231: foo(bar,baz)
 E231: [{'a':'b'}]
-/sandbox/bowling.py:35:5: W292 no newline at end of file
+/sandbox/bowling.py:42:11: E275 missing whitespace after keyword
+        if(next_string == "-"):
+          ^
+    Keywords should be followed by whitespace.
+
+Okay: from foo import (bar, baz)
+E275: from foo import(bar, baz)
+E275: from importable.module import(bar, baz)
+E275: if(foo): bar
+/sandbox/bowling.py:43:24: W291 trailing whitespace
+            score += 10
+                       ^
+    Trailing whitespace is superfluous.
+
+The warning returned varies on whether the line itself is blank,
+for easier filtering for those who want to indent their blank lines.
+
+Okay: spam(1)\n#
+W291: spam(1) \n#
+W293: class Foo(object):\n    \n    bang = 12
+/sandbox/bowling.py:44:14: W291 trailing whitespace
+        else:
+             ^
+    Trailing whitespace is superfluous.
+
+The warning returned varies on whether the line itself is blank,
+for easier filtering for those who want to indent their blank lines.
+
+Okay: spam(1)\n#
+W291: spam(1) \n#
+W293: class Foo(object):\n    \n    bang = 12
+/sandbox/bowling.py:55:33: E226 missing whitespace around arithmetic operator
+    next_string = clean_string[i+2]
+                                ^
+    Surround operators with the correct amount of whitespace.
+
+- Always surround these binary operators with a single space on
+  either side: assignment (=), augmented assignment (+=, -= etc.),
+  comparisons (==, <, >, !=, <=, >=, in, not in, is, is not),
+  Booleans (and, or, not).
+
+- Each comma, semicolon or colon should be followed by whitespace.
+
+- If operators with different priorities are used, consider adding
+  whitespace around the operators with the lowest priorities.
+
+Okay: i = i + 1
+Okay: submitted += 1
+Okay: x = x * 2 - 1
+Okay: hypot2 = x * x + y * y
+Okay: c = (a + b) * (a - b)
+Okay: foo(bar, key='word', *args, **kwargs)
+Okay: alpha[:-i]
+Okay: [a, b]
+Okay: (3,)
+Okay: a[3,] = 1
+Okay: a[1:4]
+Okay: a[:4]
+Okay: a[1:]
+Okay: a[1:4:2]
+
+E225: i=i+1
+E225: submitted +=1
+E225: x = x /2 - 1
+E225: z = x **y
+E225: z = 1and 1
+E226: c = (a+b) * (a-b)
+E226: hypot2 = x*x + y*y
+E227: c = a|b
+E228: msg = fmt%(errno, errmsg)
+E231: ['a','b']
+E231: foo(bar,baz)
+E231: [{'a':'b'}]
+/sandbox/bowling.py:55:36: W291 trailing whitespace
+    next_string = clean_string[i+2]
+                                   ^
+    Trailing whitespace is superfluous.
+
+The warning returned varies on whether the line itself is blank,
+for easier filtering for those who want to indent their blank lines.
+
+Okay: spam(1)\n#
+W291: spam(1) \n#
+W293: class Foo(object):\n    \n    bang = 12
+/sandbox/bowling.py:66:5: W292 no newline at end of file
 
     ^
+    Trailing blank lines are superfluous.
+
+Okay: spam(1)
+W391: spam(1)\n
+
+However the last line should end with a new line (warning W292).
+/sandbox/test_bowling.py:13:54: W292 no newline at end of file
+    assert bowling("X|X|-/|X|X|X|X|X|X|X||4/") == 254
+                                                     ^
     Trailing blank lines are superfluous.
 
 Okay: spam(1)

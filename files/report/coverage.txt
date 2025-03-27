@@ -1,6 +1,6 @@
 Name              Stmts   Miss  Cover   Missing
 -----------------------------------------------
-bowling.py           20      0   100%
-test_bowling.py       7      0   100%
+bowling.py           46      7    85%   18-21, 59-62
+test_bowling.py       9      0   100%
 -----------------------------------------------
-TOTAL                27      0   100%
+TOTAL                55      7    87%
