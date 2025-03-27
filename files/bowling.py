@@ -2,12 +2,16 @@
 
 def bowling(string):
     clean_string = string.replace('|', '')
-    score = 0
+    final_score = 0
 
     # Should read all numbers and compute the final result
     for i in range(10):
         if clean_string[i] == "X":
-            score += compute_X(clean_string, i)
+            final_score += compute_X(clean_string, i)
+            
+            
+    return final_score
+
         
 def compute_X(clean_string, i):
     score = 10

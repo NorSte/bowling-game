@@ -1,4 +1,118 @@
-/sandbox/bowling.py:7:5: W292 no newline at end of file
+/sandbox/bowling.py:13:5: E303 too many blank lines (2)
+    return final_score
+    ^
+    Separate top-level function and class definitions with two blank
+lines.
+
+Method definitions inside a class are separated by a single blank
+line.
+
+Extra blank lines may be used (sparingly) to separate groups of
+related functions.  Blank lines may be omitted between a bunch of
+related one-liners (e.g. a set of dummy implementations).
+
+Use blank lines in functions, sparingly, to indicate logical
+sections.
+
+Okay: def a():\n    pass\n\n\ndef b():\n    pass
+Okay: def a():\n    pass\n\n\nasync def b():\n    pass
+Okay: def a():\n    pass\n\n\n# Foo\n# Bar\n\ndef b():\n    pass
+Okay: default = 1\nfoo = 1
+Okay: classify = 1\nfoo = 1
+
+E301: class Foo:\n    b = 0\n    def bar():\n        pass
+E302: def a():\n    pass\n\ndef b(n):\n    pass
+E302: def a():\n    pass\n\nasync def b(n):\n    pass
+E303: def a():\n    pass\n\n\n\ndef b(n):\n    pass
+E303: def a():\n\n\n\n    pass
+E304: @decorator\n\ndef a():\n    pass
+E305: def a():\n    pass\na()
+E306: def a():\n    def b():\n        pass\n    def c():\n        pass
+/sandbox/bowling.py:19:23: E226 missing whitespace around arithmetic operator
+    if (clean_string[i+1] == "X"):
+                      ^
+    Surround operators with the correct amount of whitespace.
+
+- Always surround these binary operators with a single space on
+  either side: assignment (=), augmented assignment (+=, -= etc.),
+  comparisons (==, <, >, !=, <=, >=, in, not in, is, is not),
+  Booleans (and, or, not).
+
+- Each comma, semicolon or colon should be followed by whitespace.
+
+- If operators with different priorities are used, consider adding
+  whitespace around the operators with the lowest priorities.
+
+Okay: i = i + 1
+Okay: submitted += 1
+Okay: x = x * 2 - 1
+Okay: hypot2 = x * x + y * y
+Okay: c = (a + b) * (a - b)
+Okay: foo(bar, key='word', *args, **kwargs)
+Okay: alpha[:-i]
+Okay: [a, b]
+Okay: (3,)
+Okay: a[3,] = 1
+Okay: a[1:4]
+Okay: a[:4]
+Okay: a[1:]
+Okay: a[1:4:2]
+
+E225: i=i+1
+E225: submitted +=1
+E225: x = x /2 - 1
+E225: z = x **y
+E225: z = 1and 1
+E226: c = (a+b) * (a-b)
+E226: hypot2 = x*x + y*y
+E227: c = a|b
+E228: msg = fmt%(errno, errmsg)
+E231: ['a','b']
+E231: foo(bar,baz)
+E231: [{'a':'b'}]
+/sandbox/bowling.py:21:23: E226 missing whitespace around arithmetic operator
+    if (clean_string[i+2] == "X"):
+                      ^
+    Surround operators with the correct amount of whitespace.
+
+- Always surround these binary operators with a single space on
+  either side: assignment (=), augmented assignment (+=, -= etc.),
+  comparisons (==, <, >, !=, <=, >=, in, not in, is, is not),
+  Booleans (and, or, not).
+
+- Each comma, semicolon or colon should be followed by whitespace.
+
+- If operators with different priorities are used, consider adding
+  whitespace around the operators with the lowest priorities.
+
+Okay: i = i + 1
+Okay: submitted += 1
+Okay: x = x * 2 - 1
+Okay: hypot2 = x * x + y * y
+Okay: c = (a + b) * (a - b)
+Okay: foo(bar, key='word', *args, **kwargs)
+Okay: alpha[:-i]
+Okay: [a, b]
+Okay: (3,)
+Okay: a[3,] = 1
+Okay: a[1:4]
+Okay: a[:4]
+Okay: a[1:]
+Okay: a[1:4:2]
+
+E225: i=i+1
+E225: submitted +=1
+E225: x = x /2 - 1
+E225: z = x **y
+E225: z = 1and 1
+E226: c = (a+b) * (a-b)
+E226: hypot2 = x*x + y*y
+E227: c = a|b
+E228: msg = fmt%(errno, errmsg)
+E231: ['a','b']
+E231: foo(bar,baz)
+E231: [{'a':'b'}]
+/sandbox/bowling.py:25:5: W292 no newline at end of file
 
     ^
     Trailing blank lines are superfluous.
