@@ -398,9 +398,9 @@ Okay: spam(1)
 W391: spam(1)\n
 
 However the last line should end with a new line (warning W292).
-/sandbox/test_bowling.py:13:54: W292 no newline at end of file
-    assert bowling("X|X|-/|X|X|X|X|X|X|X||4/") == 254
-                                                     ^
+/sandbox/test_bowling.py:20:5: W292 no newline at end of file
+
+    ^
     Trailing blank lines are superfluous.
 
 Okay: spam(1)

@@ -13,7 +13,7 @@ def test_miss_and_spare():
     assert bowling("X|X|-/|X|X|X|X|X|X|X||4/") == 254
     
 def test_final_combination():
-    assert bowling("X|7/|9-|X|-8|8/|-6|X|X|X||81") == 164
+    assert bowling("X|7/|9-|X|-8|8/|-6|X|X|X||81") == 167
 
     
     
