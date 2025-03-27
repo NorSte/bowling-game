@@ -2,15 +2,27 @@
 platform linux -- Python 3.13.2, pytest-8.3.4, pluggy-1.5.0 -- /usr/local/bin/python3.13
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=915355
+Using --random-order-seed=504126
 
 rootdir: /sandbox
 plugins: cov-6.0.0, mock-3.14.0, random-order-1.1.1
-collecting ... collected 4 items
+collecting ... collected 5 items
 
-test_bowling.py::test_strikes_with_spares PASSED                         [ 25%]
-test_bowling.py::test_strikes_and_numbers PASSED                         [ 50%]
-test_bowling.py::test_miss_and_spare PASSED                              [ 75%]
-test_bowling.py::test_all_strikes PASSED                                 [100%]
+test_bowling.py::test_strikes_and_numbers PASSED                         [ 20%]
+test_bowling.py::test_strikes_and_spares PASSED                          [ 40%]
+test_bowling.py::test_final_combination FAILED                           [ 60%]
+test_bowling.py::test_all_strikes PASSED                                 [ 80%]
+test_bowling.py::test_miss_and_spare PASSED                              [100%]
 
-============================== 4 passed in 0.07s ===============================
+=================================== FAILURES ===================================
+____________________________ test_final_combination ____________________________
+
+    def test_final_combination():
+>       assert bowling("X|7/|9-|X|-8|8/|-6|X|X|X||81") == 164
+E       AssertionError: assert 167 == 164
+E        +  where 167 = bowling('X|7/|9-|X|-8|8/|-6|X|X|X||81')
+
+test_bowling.py:16: AssertionError
+=========================== short test summary info ============================
+FAILED test_bowling.py::test_final_combination - AssertionError: assert 167 =...
+========================= 1 failed, 4 passed in 0.13s ==========================
