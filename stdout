@@ -2,35 +2,12 @@
 platform linux -- Python 3.13.2, pytest-8.3.4, pluggy-1.5.0 -- /usr/local/bin/python3.13
 cachedir: .pytest_cache
 Using --random-order-bucket=global
-Using --random-order-seed=540226
+Using --random-order-seed=477464
 
 rootdir: /sandbox
 plugins: cov-6.0.0, mock-3.14.0, random-order-1.1.1
-collecting ... collected 2 items
+collecting ... collected 1 item
 
-test_hiker.py::test_global_function FAILED                               [ 50%]
-test_hiker.py::test_instance_method FAILED                               [100%]
+test_bowling.py::test_all_strikes PASSED                                 [100%]
 
-=================================== FAILURES ===================================
-_____________________________ test_global_function _____________________________
-
-    def test_global_function():
->       assert global_answer() == 42
-E       assert 54 == 42
-E        +  where 54 = global_answer()
-
-test_hiker.py:4: AssertionError
-_____________________________ test_instance_method _____________________________
-
-    def test_instance_method():
->       assert Hiker().instance_answer() == 42
-E       assert 54 == 42
-E        +  where 54 = instance_answer()
-E        +    where instance_answer = <hiker.Hiker object at 0x7f2dd2818830>.instance_answer
-E        +      where <hiker.Hiker object at 0x7f2dd2818830> = Hiker()
-
-test_hiker.py:7: AssertionError
-=========================== short test summary info ============================
-FAILED test_hiker.py::test_global_function - assert 54 == 42
-FAILED test_hiker.py::test_instance_method - assert 54 == 42
-============================== 2 failed in 0.08s ===============================
+============================== 1 passed in 0.06s ===============================
