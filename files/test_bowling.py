@@ -8,3 +8,6 @@ def test_strikes_and_numbers():
     
 def test_strikes_with_spares():
     assert bowling("X|X|X|X|X|X|X|X|X|X||4/") == 284
+    
+def test_miss_and_spare():
+    assert bowling("X|X|-/|X|X|X|X|X|X|X||4/") == 260
