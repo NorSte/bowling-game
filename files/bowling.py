@@ -25,7 +25,7 @@ def compute_X(clean_string, i):
         
     if (next_next_string== "X"):
         score += 10
-    elif (next_string == "/"):
+    elif (next_next_string == "/"):
         score += 10 - int(next_string)
     else:
         score += int(next_next_string)
