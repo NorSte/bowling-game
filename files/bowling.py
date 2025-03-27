@@ -15,11 +15,15 @@ def bowling(string):
         
 def compute_X(clean_string, i):
     score = 10
+    next_string = clean_string[i+1]
+    next_next_string = clean_string[i+2]
     
-    if (clean_string[i+1] == "X"):
+    if (next_string == "X"):
         score += 10
-    if (clean_string[i+2] == "X"):
+    if (next_next_string== "X"):
         score += 10
+    else:
+        score += int(next_next_string)
     
     return score
     
