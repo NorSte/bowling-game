@@ -1,6 +1,6 @@
-# 🎳 Bowling Game (Cyber-Dojo Challenge)
+# 🎳 Bowling Game (Cyber-Dojo Challenge) - Test-Driven Development Task (TDD)
 
-This is a Python implementation of the classic **Bowling Score Calculator**, developed as part of the Cyber-Dojo kata.
+This is a Python implementation of the classic **Bowling Score Calculator**, developed as part of the Cyber-Dojo kata. 
 
 ## Project Structure
 
